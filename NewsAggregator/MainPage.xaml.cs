@@ -1,4 +1,5 @@
 ﻿using Facebook;
+using NewsAggregator.Data;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,6 @@ namespace NewsAggregator
         public MainPage()
         {
             this.InitializeComponent();
-            String url = "https://graph.facebook.com/v2.7/me?fields=id,name,likes{is_verified}";
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
@@ -93,36 +93,8 @@ namespace NewsAggregator
             String usr = usrName.Text;
             String pass = passwrd.Text;
             Profile p = new Profile(usr, pass);
-
-            MemoryStream stream = new MemoryStream();
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Profile));
-            ser.WriteObject(stream, p);
-            stream.Position = 0;
-            StreamReader sr = new StreamReader(stream);
-            String data = sr.ReadToEnd();
-            var client = new HttpClient();
-
-            var httpContent = new StringContent(data, Encoding.UTF8, "application/json");
-
-            var response = client.PostAsync("http://localhost:4567/addProfile", httpContent).Result;
-
-            if (response.IsSuccessStatusCode)
-            {
-                String result = await response.Content.ReadAsStringAsync();
-                
-                if (result.Equals("false"))
-                {
-                    //username taken
-                    var dialog = new MessageDialog("Username Taken");
-                    await dialog.ShowAsync();
-                }
-                else
-                {
-                    //account created
-                    String id = result.ToString();
-                  }
-            }
-
+            String result = await ProfileService.Write(p);
+            String id = await ProfileService.ParseResponse(result);
         }
     }
 }
