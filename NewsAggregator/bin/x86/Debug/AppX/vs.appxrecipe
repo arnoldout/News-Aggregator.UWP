@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>01e9274e-208b-47f0-9951-eee95f3c90f6</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>6DA1CDC702ABF3DD138A2698FBB1A8CF426F6A302486E5800BEF4FF185B380EC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>43030arnoldout.Nws_1.1.0.0_x86__rmt0gkmpkhxej</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>43030arnoldout.Nws_rmt0gkmpkhxej!App</RegisteredUserModeAppID>
@@ -19,16 +19,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-01T13:52:37.097</Modified>
+      <Modified>2016-10-01T21:26:56.304</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\bin\x86\Debug\NewsAggregator.exe">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.exe">
       <PackagePath>entrypoint\NewsAggregator.exe</PackagePath>
-      <Modified>2016-10-01T13:52:36.647</Modified>
+      <Modified>2016-10-01T21:26:55.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -494,49 +494,49 @@
       <PackagePath>winsdkfb.winmd</PackagePath>
       <Modified>2016-09-29T19:35:34.498</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-09-28T18:26:27.637</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-09-28T18:25:29.697</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
       <PackagePath>NewsAggregator.xr.xml</PackagePath>
       <Modified>2016-09-30T21:03:38.208</Modified>
     </AppxPackagedFile>
@@ -548,13 +548,13 @@
       <PackagePath>winsdkfb\Images\fb_blank_profile_portrait.png</PackagePath>
       <Modified>2016-09-29T19:35:34.624</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-09-30T21:43:10.347</Modified>
+      <Modified>2016-10-01T21:19:59.703</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NewsAggregator\NewsAggregator\bin\x86\Debug\Core\NewsAggregator.exe">
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\NewsAggregator.exe">
       <PackagePath>NewsAggregator.exe</PackagePath>
-      <Modified>2016-10-01T13:52:37.095</Modified>
+      <Modified>2016-10-01T21:26:56.302</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

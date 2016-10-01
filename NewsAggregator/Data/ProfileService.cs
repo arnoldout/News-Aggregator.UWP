@@ -59,5 +59,11 @@ namespace NewsAggregator.Data
             StreamReader sr = new StreamReader(stream);
             return sr.ReadToEnd();  
         }
+
+        internal static async void FailedRequest()
+        {
+            var dialog = new MessageDialog("The server could not be reached");
+            await dialog.ShowAsync();
+        }
     }
 }

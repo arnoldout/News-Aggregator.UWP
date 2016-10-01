@@ -93,8 +93,16 @@ namespace NewsAggregator
             String usr = usrName.Text;
             String pass = passwrd.Text;
             Profile p = new Profile(usr, pass);
-            String result = await ProfileService.Write(p);
-            String id = await ProfileService.ParseResponse(result);
+            try
+            {
+                String result = await ProfileService.Write(p);
+                String id = await ProfileService.ParseResponse(result);
+            }
+            catch(AggregateException)
+            {
+                ProfileService.FailedRequest();
+            }
+            
         }
     }
 }
