@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="NewsAggregator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NewsAggregator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:ConnectionId='1' x:Name="login" Content="Login to Facebook" HorizontalAlignment="Left" Margin="192,339,0,0" VerticalAlignment="Top"                     />
+        <TextBox x:ConnectionId='2' x:Name="usrName" HorizontalAlignment="Left" Margin="144,141,0,0" TextWrapping="Wrap" PlaceholderText="Username" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='3' x:Name="passwrd" HorizontalAlignment="Left" Margin="144,228,0,0" TextWrapping="Wrap" PlaceholderText="Password" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='4' x:Name="register" Content="Register"  HorizontalAlignment="Left" Margin="77,339,0,0" VerticalAlignment="Top"                       />
+
+    </Grid>
+</Page>
+

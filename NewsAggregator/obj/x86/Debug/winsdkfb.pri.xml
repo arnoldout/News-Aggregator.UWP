@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="winsdkfb" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="winsdkfb">
+				<NamedResource name="FacebookDialog.xbf" uri="ms-resource://winsdkfb/Files/winsdkfb/FacebookDialog.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FacebookProfilePictureControl.xbf" uri="ms-resource://winsdkfb/Files/winsdkfb/FacebookProfilePictureControl.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Controls">
+					<NamedResource name="FacebookLoginButton.xbf" uri="ms-resource://winsdkfb/Files/winsdkfb/Controls/FacebookLoginButton.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Images">
+					<NamedResource name="fb_blank_profile_portrait.png" uri="ms-resource://winsdkfb/Files/winsdkfb/Images/fb_blank_profile_portrait.png">
+						<Candidate type="Path">
+							<Value>winsdkfb\Images\fb_blank_profile_portrait.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://winsdkfb/Files/winsdkfb/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Styles.xbf" uri="ms-resource://winsdkfb/Files/winsdkfb/Themes/Styles.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
