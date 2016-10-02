@@ -96,7 +96,8 @@ namespace NewsAggregator
             try
             {
                 String result = await ProfileService.Write(p);
-                String id = await ProfileService.ParseResponse(result);
+                String id = await ProfileService.ParseRegResponse(result);
+                ProfileService.GetProfile(id);
             }
             catch(AggregateException)
             {

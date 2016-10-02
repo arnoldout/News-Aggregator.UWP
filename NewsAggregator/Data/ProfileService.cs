@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -26,7 +28,7 @@ namespace NewsAggregator.Data
             }
             return "false";
         }
-        public static async Task<string> ParseResponse(String result)
+        public static async Task<string> ParseRegResponse(String result)
         {
             if (result.Equals("false"))
             {
@@ -34,23 +36,27 @@ namespace NewsAggregator.Data
                 var dialog = new MessageDialog("Username Taken");
                 await dialog.ShowAsync();
                 return "false";
-            }
+           } 
             else
             {
                 //account created
                 return result.ToString();
             }
         }
-        /*public static async Task<Profile> getProfile(String id)
+        public static async void GetProfile(String id)
         {
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(String));
-            string data = GetPostHeader(id, ser);
-            var client = new HttpClient();
-            var httpContent = new StringContent(data, Encoding.UTF8, "application/json");
 
-            var response = client.PostAsync("http://localhost:4567/getProfile", httpContent).Result;
+            String url = "http://localhost:4567/getProfile/" + id;
+            WebRequest wrGETURL = WebRequest.Create(url);
+            wrGETURL.Proxy = null;
 
-        }*/
+            WebResponse response = await wrGETURL.GetResponseAsync();
+            Stream dataStream = response.GetResponseStream();
+            StreamReader objReader = new StreamReader(dataStream);
+            dynamic movie = JsonConvert.DeserializeObject(objReader.ReadToEnd());
+        }
+
         public static string GetPostHeader(Object p, DataContractJsonSerializer deseri)
         {
             MemoryStream stream = new MemoryStream();

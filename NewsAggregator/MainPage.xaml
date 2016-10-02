@@ -8,10 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="login" Content="Login to Facebook" HorizontalAlignment="Left" Margin="192,339,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <Button x:Name="FBlogin" Content="Login to Facebook" HorizontalAlignment="Left" Margin="192,339,0,0" VerticalAlignment="Top" Click="button_Click"/>
         <TextBox x:Name="usrName" HorizontalAlignment="Left" Margin="144,141,0,0" TextWrapping="Wrap" PlaceholderText="Username" VerticalAlignment="Top"/>
         <TextBox x:Name="passwrd" HorizontalAlignment="Left" Margin="144,228,0,0" TextWrapping="Wrap" PlaceholderText="Password" VerticalAlignment="Top"/>
         <Button x:Name="register" Content="Register"  HorizontalAlignment="Left" Margin="77,339,0,0" VerticalAlignment="Top" Click="register_Click"/>
+        <Button x:Name="Mongologin" Content="Login" HorizontalAlignment="Left" Margin="166,431,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
