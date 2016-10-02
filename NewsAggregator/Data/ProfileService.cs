@@ -28,12 +28,12 @@ namespace NewsAggregator.Data
             }
             return "false";
         }
-        public static async Task<string> ParseRegResponse(String result)
+        public static async Task<string> ParseRegResponse(String result, String dialogMsg)
         {
             if (result.Equals("false"))
             {
                 //username taken
-                var dialog = new MessageDialog("Username Taken");
+                var dialog = new MessageDialog(dialogMsg);
                 await dialog.ShowAsync();
                 return "false";
            } 
@@ -70,6 +70,20 @@ namespace NewsAggregator.Data
         {
             var dialog = new MessageDialog("The server could not be reached");
             await dialog.ShowAsync();
+        }
+        public static async Task<String> login(Profile p)
+        {
+            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Profile));
+            string data = GetPostHeader(p, ser);
+            var client = new HttpClient();
+            var httpContent = new StringContent(data, Encoding.UTF8, "application/json");
+
+            var response = client.PostAsync("http://localhost:4567/login", httpContent).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "false";
         }
     }
 }

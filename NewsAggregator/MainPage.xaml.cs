@@ -96,14 +96,35 @@ namespace NewsAggregator
             try
             {
                 String result = await ProfileService.Write(p);
-                String id = await ProfileService.ParseRegResponse(result);
-                ProfileService.GetProfile(id);
+                String id = await ProfileService.ParseRegResponse(result, "Username Taken");
+                App.loginid = id;
+                Frame.Navigate(typeof(Feed));
             }
             catch(AggregateException)
             {
                 ProfileService.FailedRequest();
             }
             
+        }
+
+        private async void Mongologin_Click(object sender, RoutedEventArgs e)
+        {
+            String usr = usrName.Text;
+            String pass = passwrd.Text;
+            Profile p = new Profile(usr, pass);
+            try
+            {
+                String id = await ProfileService.ParseRegResponse(await ProfileService.login(p), "Invalid Login");
+                if(id!="false")
+                {
+                    App.loginid = id;
+                    Frame.Navigate(typeof(Feed));
+                }
+            }
+            catch (AggregateException)
+            {
+                ProfileService.FailedRequest();
+            }
         }
     }
 }
