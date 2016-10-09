@@ -11,6 +11,14 @@
           "lib/win8/Facebook.dll": {}
         }
       },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1599,6 +1607,14 @@
         },
         "runtime": {
           "lib/win8/Facebook.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -3291,6 +3307,14 @@
           "lib/win8/Facebook.dll": {}
         }
       },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -4951,6 +4975,14 @@
         },
         "runtime": {
           "lib/win8/Facebook.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -6648,6 +6680,14 @@
           "lib/win8/Facebook.dll": {}
         }
       },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8308,6 +8348,14 @@
         },
         "runtime": {
           "lib/win8/Facebook.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -10005,6 +10053,14 @@
           "lib/win8/Facebook.dll": {}
         }
       },
+      "HtmlAgilityPack/1.4.9.5": {
+        "compile": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -11689,6 +11745,41 @@
         "package/services/metadata/core-properties/85cf59e716cf4742ab986922052c89f8.psmdcp",
         "readme.txt",
         "serializers/JsonNetSerializer.cs"
+      ]
+    },
+    "HtmlAgilityPack/1.4.9.5": {
+      "sha512": "i5di/J7GO4y2kx/hhVzctPrBI8G2cefWZDMDU/FdOUD3iVkiidN1q1NDZ0FvqrhB28LSaYaM4Z0hs86Tnp0IzA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "HAPIcon.png",
+        "HtmlAgilityPack.nuspec",
+        "lib/Net20/HtmlAgilityPack.dll",
+        "lib/Net20/HtmlAgilityPack.pdb",
+        "lib/Net20/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.pri",
+        "lib/NetCore45/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/sl5/HtmlAgilityPack.dll",
+        "lib/sl5/HtmlAgilityPack.pdb",
+        "lib/sl5/HtmlAgilityPack.XML",
+        "package/services/metadata/core-properties/de23ce344eee4ed59764b48c6de87e29.psmdcp",
+        "readme.txt"
       ]
     },
     "Microsoft.ApplicationInsights/1.0.0": {
@@ -15164,6 +15255,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Facebook >= 7.0.6",
+      "HtmlAgilityPack >= 1.4.9.5",
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",

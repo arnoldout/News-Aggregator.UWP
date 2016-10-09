@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
@@ -37,16 +38,45 @@ namespace NewsAggregator
             StringBuilder sb = new StringBuilder();
             NewsFactory nf = new NewsFactory();
             await nf.getDocs();
-            Task.WaitAll();
+            String url = "";
             foreach (XmlDoc doc in nf.Docs)
             {
                 foreach (Story s in doc.NewsItems)
                 {
                     sb.Append(s.Title + "\n");
+                    url = s.Uri;
                 }
             }
+            WebRequest wrGETURL = WebRequest.Create(url);
+            wrGETURL.Proxy = null;
+            WebResponse response = await wrGETURL.GetResponseAsync();
+            Stream dataStream = response.GetResponseStream();
+            TextReader tr = new StreamReader(dataStream);
+            String str = "<td>mamma</td><td><strong>papa</strong></td>";
+            str = removeTags(str);
             //title, guid, description, category 
-            tb1.Text = sb.ToString();
+            webVw.NavigateToString(str);
+
+
         }
+        /*
+        *
+        *   Should work with asp api or whatever,
+            UWP just doesn't support XPath atm
+        *
+        *
+        public String removeTags(string str)
+        {
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(Properties.Resources.HtmlContents);
+            var text = doc.DocumentNode.SelectNodes("//body//text()").Select(node => node.InnerText);
+            StringBuilder output = new StringBuilder();
+            foreach (string line in text)
+            {
+                output.AppendLine(line);
+            }
+            HttpUtility.HtmlDecode(output.ToString());
+        }*/
+
     }
 }
