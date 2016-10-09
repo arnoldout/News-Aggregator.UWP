@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="tb1"  HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <ListView x:Name="listView" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="200"/>
 
     </Grid>
 </Page>

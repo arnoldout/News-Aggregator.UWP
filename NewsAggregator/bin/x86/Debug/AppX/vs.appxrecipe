@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-02T13:47:36.011</Modified>
+      <Modified>2016-10-08T15:53:03.266</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.exe">
       <PackagePath>entrypoint\NewsAggregator.exe</PackagePath>
-      <Modified>2016-10-02T13:47:35.589</Modified>
+      <Modified>2016-10-08T15:53:02.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -498,9 +498,13 @@
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-09-28T18:26:27.637</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2016-09-28T18:25:29.697</Modified>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\White.png">
+      <PackagePath>Assets\White.png</PackagePath>
+      <Modified>2016-10-03T21:42:43.282</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\White.png">
+      <PackagePath>Properties\White.png</PackagePath>
+      <Modified>2016-10-03T21:42:30.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -536,9 +540,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2016-09-28T18:25:29.697</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
       <PackagePath>NewsAggregator.xr.xml</PackagePath>
-      <Modified>2016-09-30T21:03:38.208</Modified>
+      <Modified>2016-10-07T21:59:00.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -550,11 +558,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-10-02T13:44:05.649</Modified>
+      <Modified>2016-10-08T14:20:40.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\NewsAggregator.exe">
       <PackagePath>NewsAggregator.exe</PackagePath>
-      <Modified>2016-10-02T13:47:36.009</Modified>
+      <Modified>2016-10-08T15:53:03.264</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

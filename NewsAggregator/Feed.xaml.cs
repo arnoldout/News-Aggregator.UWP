@@ -1,8 +1,13 @@
-﻿using System;
+﻿using NewsAggregator.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +30,23 @@ namespace NewsAggregator
         public Feed()
         {
             this.InitializeComponent();
+            getNytXmlFeed();
+        }
+        public async Task getNytXmlFeed()
+        {
+            StringBuilder sb = new StringBuilder();
+            NewsFactory nf = new NewsFactory();
+            await nf.getDocs();
+            Task.WaitAll();
+            foreach (XmlDoc doc in nf.Docs)
+            {
+                foreach (Story s in doc.NewsItems)
+                {
+                    sb.Append(s.Title + "\n");
+                }
+            }
+            //title, guid, description, category 
+            tb1.Text = sb.ToString();
         }
     }
 }

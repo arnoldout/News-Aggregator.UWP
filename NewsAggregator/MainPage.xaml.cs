@@ -82,7 +82,6 @@ namespace NewsAggregator
                 String str = stuff.id;
                 dynamic likes = await client.GetTaskAsync(results);
                 
-                int i = 0;
             }
             //await ParseAuthenticationResult(result);
             return "";
@@ -90,6 +89,7 @@ namespace NewsAggregator
 
         private async void register_Click(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(Feed));
             String usr = usrName.Text;
             String pass = passwrd.Text;
             Profile p = new Profile(usr, pass);

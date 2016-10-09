@@ -372,8 +372,11 @@
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\White.png">
+      <PackagePath>Assets\White.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\White.png">
+      <PackagePath>Properties\White.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -401,6 +404,9 @@
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
       <PackagePath>NewsAggregator.xr.xml</PackagePath>
