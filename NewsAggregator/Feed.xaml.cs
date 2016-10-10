@@ -53,7 +53,7 @@ namespace NewsAggregator
             Stream dataStream = response.GetResponseStream();
             TextReader tr = new StreamReader(dataStream);
             String str = "<td>mamma</td><td><strong>papa</strong></td>";
-            str = removeTags(str);
+            //str = removeTags(str);
             //title, guid, description, category 
             webVw.NavigateToString(str);
 
