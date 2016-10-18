@@ -12,6 +12,7 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock" />
     <RootType FullName="Windows.UI.Xaml.Controls.WebView" />
     <RootType FullName="NewsAggregator.Feed" />
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">

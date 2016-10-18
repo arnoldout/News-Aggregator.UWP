@@ -24,6 +24,9 @@
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\HtmlAgilityPack\1.4.9.5\lib\NetCore45\HtmlAgilityPack.dll">
+      <PackagePath>HtmlAgilityPack.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
     </AppxPackagedFile>

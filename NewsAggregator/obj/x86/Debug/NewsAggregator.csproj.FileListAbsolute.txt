@@ -424,3 +424,5 @@ C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\o
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\winsdkfb.pri.xml
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\HtmlAgilityPack.dll
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\HtmlAgilityPack.pri.xml
