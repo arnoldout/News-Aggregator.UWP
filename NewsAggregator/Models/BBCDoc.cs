@@ -26,7 +26,7 @@ namespace NewsAggregator.Models
                     */
 
                     //url
-                    if (n.Name.Equals("guid "))
+                    if (n.Name.Equals("guid"))
                     {
                         item.Uri = n.InnerText;
                     }

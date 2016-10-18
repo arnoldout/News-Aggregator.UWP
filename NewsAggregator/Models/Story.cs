@@ -12,7 +12,17 @@ namespace NewsAggregator.Models
         private String description;
         private String uri;
         private List<String> categories = new List<string>();
+        public Story(String title, String description, String uri, List<String> categories)
+        {
+            this.title = title;
+            this.description = description;
+            this.uri = uri;
+            this.categories = categories;
+        }
+        public Story()
+        {
 
+        }
         public string Title
         {
             get

@@ -41,7 +41,7 @@ namespace NewsAggregator
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
-            //await AuthenticateFacebookAsync();
+            await AuthenticateFacebookAsync();
         }
         private async Task<String> AuthenticateFacebookAsync()
         {
@@ -89,7 +89,6 @@ namespace NewsAggregator
 
         private async void register_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Feed));
             String usr = usrName.Text;
             String pass = passwrd.Text;
             Profile p = new Profile(usr, pass);
