@@ -28,8 +28,8 @@ namespace NewsAggregator
         /// </summary>
         /// 
         public static String loginid;
-        //public static String apiURL = "http://nws-mongo-api.herokuapp.com/";
-        public static String apiURL = "http://localhost:4567/";
+        public static String apiURL = "http://nws-mongo-api.herokuapp.com/";
+        //public static String apiURL = "http://localhost:4567/";
         public App()
         {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(

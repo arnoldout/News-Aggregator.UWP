@@ -4,13 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -28,27 +22,37 @@ namespace NewsAggregator
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Feed : Page
+    public sealed partial class NwsViewer : Page
     {
-        public Feed()
+        public String uri;
+        public NwsViewer()
         {
             this.InitializeComponent();
-            getStories();
         }
-        public async Task getStories()
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            base.OnNavigatedTo(e);
+            var parameters = (Story)e.Parameter;
+            uri = parameters.Uri;
+            viewer.Navigate(new Uri(parameters.Uri));
             ProfileService ps = new ProfileService();
-            List<Story> lj = await ps.getStories();
-            lvw.ItemsSource = lj;
-            
+            foreach(String s in parameters.Categories)
+            {
+                ps.addLike(s);
+            }
         }
-        
-        private void lvw_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void viewer_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            var item = e.AddedItems?.FirstOrDefault();
-            Story s = (Story)item;
-            Frame.Navigate(typeof(NwsViewer), s);
-            String ss = s.Uri;
+            if(args.Uri!=null&&args.Uri != new Uri(uri))
+            {
+                args.Cancel = true;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Feed));
         }
     }
 }

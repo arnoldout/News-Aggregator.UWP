@@ -8,8 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:ConnectionId='1' x:Name="tb1"></TextBlock>
-        <WebView x:ConnectionId='2' x:Name="webVw"  />
+        <ListView x:ConnectionId='1' x:Name="lvw" HorizontalAlignment="Stretch" VerticalAlignment="Top"                                         >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <TextBlock Text="{Binding Description}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding uri}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
 

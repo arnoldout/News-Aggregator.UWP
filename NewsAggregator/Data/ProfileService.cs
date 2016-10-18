@@ -92,6 +92,15 @@ namespace NewsAggregator.Data
             return storiess;
 
         }
+        public void addLike(String like)
+        {
+            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));
+            String url = App.apiURL + "addLike/" + App.loginid+"/"+like;
+            WebRequest wrGETURL = WebRequest.Create(url);
+            wrGETURL.Proxy = null;
+
+            wrGETURL.GetResponseAsync();
+        }
         internal static async void FailedRequest()
         {
             var dialog = new MessageDialog("The server could not be reached");
