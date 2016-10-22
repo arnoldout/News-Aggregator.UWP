@@ -37,18 +37,15 @@ namespace NewsAggregator
         }
         public async Task getStories()
         {
-            ProfileService ps = new ProfileService();
-            List<Story> lj = await ps.getStories();
-            lvw.ItemsSource = lj;
-            
+            NwsPaper np = new NwsPaper();
+            lvw.ItemsSource = np.Stories;
         }
-        
+
         private void lvw_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var item = e.AddedItems?.FirstOrDefault();
             Story s = (Story)item;
             Frame.Navigate(typeof(NwsViewer), s);
-            String ss = s.Uri;
         }
     }
 }

@@ -66,41 +66,6 @@ namespace NewsAggregator.Data
             StreamReader sr = new StreamReader(stream);
             return sr.ReadToEnd();  
         }
-        public async Task<List<Story>> getStories()
-        {
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));
-            String url = App.apiURL + "getArticles/" + App.loginid;
-            WebRequest wrGETURL = WebRequest.Create(url);
-            wrGETURL.Proxy = null;
-
-            WebResponse response = await wrGETURL.GetResponseAsync();
-            Stream dataStream = response.GetResponseStream();
-            StreamReader objReader = new StreamReader(dataStream);
-            dynamic stories = JsonConvert.DeserializeObject(objReader.ReadToEnd());
-            List<Story> storiess = new List<Story>();
-            foreach(dynamic d in stories)
-            {
-                dynamic dd = d.categories;
-                List<String> categories = new List<string>();
-                foreach(String ddd in dd)
-                {
-                    categories.Add(ddd);
-                }
-                storiess.Add(new Story(System.Convert.ToString(d.title), System.Convert.ToString(d.description), System.Convert.ToString(d.uri), categories));
-                
-            }
-            return storiess;
-
-        }
-        public void addLike(String like)
-        {
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));
-            String url = App.apiURL + "addLike/" + App.loginid+"/"+like;
-            WebRequest wrGETURL = WebRequest.Create(url);
-            wrGETURL.Proxy = null;
-
-            wrGETURL.GetResponseAsync();
-        }
         internal static async void FailedRequest()
         {
             var dialog = new MessageDialog("The server could not be reached");
