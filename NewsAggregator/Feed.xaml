@@ -7,17 +7,40 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#FFFFFF" Offset="0.25"/>
+                <GradientStop Color="#FFFFFF" Offset="0.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <ListView x:Name="lvw" HorizontalAlignment="Stretch" VerticalAlignment="Top" SelectionChanged="lvw_SelectionChanged" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                        <TextBlock Text="{Binding Description}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="{Binding uri}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                    </StackPanel>
+                    <Border BorderBrush="#F5F5F5" BorderThickness="0,0,0,5" >
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <TextBlock Text="{Binding Title}" HorizontalAlignment="Stretch" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Image Source="{Binding imgUri}"/>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Description}" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
     </Grid>
 </Page>

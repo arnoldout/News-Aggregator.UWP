@@ -10,8 +10,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                <GradientStop Color="#FFEA2E3F" Offset="0.25"/>
-                <GradientStop Color="#FFF34E5E" Offset="0.0"/>
+                <GradientStop Color="#F5F5F5" Offset="0.25"/>
+                <GradientStop Color="#F5F5F5" Offset="0.0"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Button x:Name="FBlogin" Content="Login to Facebook" HorizontalAlignment="Left" Margin="192,339,0,0" VerticalAlignment="Top" Click="button_Click"/>

@@ -35,10 +35,11 @@ namespace NewsAggregator
             var parameters = (Story)e.Parameter;
             uri = parameters.Uri;
             viewer.Navigate(new Uri(parameters.Uri));
-            ProfileService ps = new ProfileService();
+            
+            StoryService ss = new StoryService();
             foreach(String s in parameters.Categories)
             {
-                ps.addLike(s);
+                ss.addLike(s);
             }
         }
 
@@ -51,7 +52,7 @@ namespace NewsAggregator
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             Frame.Navigate(typeof(Feed));
         }
     }
