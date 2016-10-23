@@ -25,7 +25,7 @@ namespace NewsAggregator.Data
             var response = client.PostAsync(App.apiURL+"addProfile", httpContent).Result;
             if (response.IsSuccessStatusCode)
             {
-                return await response.Content.ReadAsStringAsync();
+                return await ParseRegResponse(await response.Content.ReadAsStringAsync(), "Invalid Login");
             }
             return "false";
         }

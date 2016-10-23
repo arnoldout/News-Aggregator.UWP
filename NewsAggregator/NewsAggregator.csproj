@@ -94,7 +94,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\noimage.gif" />
+    <Content Include="Assets\logo.jpg" />
     <Content Include="Assets\White.png" />
+    <Content Include="Assets\back_Arrow.svg" />
+    <Content Include="Assets\Facebook Icon.ico" />
     <Content Include="Properties\White.png" />
     <None Include="NewsAggregator_StoreKey.pfx" />
     <None Include="project.json" />
@@ -119,7 +122,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\NotificationBase.cs" />
+    <Compile Include="ViewModels\NwsPaperViewModel.cs" />
     <Compile Include="ViewModels\Register.cs" />
+    <Compile Include="ViewModels\StoryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

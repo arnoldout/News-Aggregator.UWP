@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using winsdkfb;
 
@@ -37,6 +38,7 @@ namespace NewsAggregator
         public MainPage()
         {
             this.InitializeComponent();
+            FBlogin.Source= new BitmapImage(new Uri(this.BaseUri, "/Assets/Facebook Icon.ico"));
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
@@ -48,7 +50,7 @@ namespace NewsAggregator
             //Facebook app id
             var clientId = "935566066588259";
             //Facebook permissions
-            var scope = "public_profile,email,user_likes";
+            var scope = "public_profile,email";
 
             var redirectUri = WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString();
             var fb = new FacebookClient();
@@ -75,13 +77,20 @@ namespace NewsAggregator
                 var TokenExpiry = DateTime.Now.AddSeconds(double.Parse(expires_in.Value));
 
                 FacebookClient client = new FacebookClient(AccessToken);
-                dynamic stuff = await client.GetTaskAsync("me");
-                //FBSession
-                var results = string.Format("https://graph.facebook.com/me/likes?&access_token=EAANS5HMQGmMBAGQ5lJSOhgjJk5CSCtPPfLOi37ZCv7Fj86KZC1ZCAZCYzOCMDrk9G4rIZCqzNfdwunuZC4nZCydZAYnOhuJjra0vsTCWeqzAMp6hkOx9xjxQZC9REbRRnGL9k1CFZBsNZAex8vEKBZB3xzeEfP1VB2jivUbHeW7ZAerP9Iwoc18uc8QoHhQkNigcxBWkZD");
-                //dynamic t = await client.GetTaskAsync("https://graph.facebook.com/v2.7/me/likes");
-                String str = stuff.id;
-                dynamic likes = await client.GetTaskAsync(results);
-                
+                dynamic results = await client.GetTaskAsync("https://graph.facebook.com/v2.7/me?fields=id,name,email&access_token=" + AccessToken);
+                dynamic email = results.email;
+                dynamic name = results.name;
+                Profile p = new Profile("faacebook"+email, name);
+                String loginStatus = await ProfileService.login(p);
+                if(loginStatus.Equals("false"))
+                {
+                    loginStatus = await ProfileService.Write(p);
+                    if (!loginStatus.Equals("false"))
+                    {
+                        App.loginid = loginStatus;
+                    }
+                }
+                Frame.Navigate(typeof(Feed));
             }
             //await ParseAuthenticationResult(result);
             return "";
@@ -89,14 +98,16 @@ namespace NewsAggregator
 
         private async void register_Click(object sender, RoutedEventArgs e)
         {
-            String usr = usrName.Text;
-            String pass = passwrd.Text;
+            String usr = txtUsrName.Text;
+            String pass = txtPasswrd.Text;
             Profile p = new Profile(usr, pass);
             try
             {
                 String result = await ProfileService.Write(p);
-                String id = await ProfileService.ParseRegResponse(result, "Username Taken");
-                App.loginid = id;
+                if (!result.Equals("false"))
+                {
+                    App.loginid = result;
+                }
                 Frame.Navigate(typeof(Feed));
             }
             catch(AggregateException)
@@ -108,13 +119,13 @@ namespace NewsAggregator
 
         private async void Mongologin_Click(object sender, RoutedEventArgs e)
         {
-            String usr = usrName.Text;
-            String pass = passwrd.Text;
+            String usr = txtUsrName.Text;
+            String pass = txtPasswrd.Text;
             Profile p = new Profile(usr, pass);
             try
             {
                 String id = await ProfileService.ParseRegResponse(await ProfileService.login(p), "Invalid Login");
-                if(id!="false")
+                if(!id.Equals("false"))
                 {
                     App.loginid = id;
                     Frame.Navigate(typeof(Feed));

@@ -13,6 +13,10 @@ namespace NewsAggregator.Data
 {
     class StoryService
     {
+        public static void update(Story s)
+        {
+            //update something
+        }
         public static async Task<List<Story>> getStories(String id)
         {
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));

@@ -8,7 +8,29 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <WebView x:Name="viewer" NavigationStarting="viewer_NavigationStarting"  />
-        <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Content="Go Back" Click="Button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="15*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#27292E">
+            <TextBlock Text="Web View" Foreground="White" VerticalAlignment="Center" FontFamily="Helvetica" HorizontalAlignment="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="16*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Background="#E54F4B">
+                    <Image VerticalAlignment="Stretch" Source="Assets/back_Arrow" HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <WebView x:Name="viewer" NavigationStarting="viewer_NavigationStarting"  />
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Content="Go Back" Click="Button_Click"/>
+        </Grid>
+        <ProgressRing x:Name="progressRing"/>
     </Grid>
 </Page>

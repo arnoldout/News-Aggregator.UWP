@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -29,17 +31,21 @@ namespace NewsAggregator
         {
             this.InitializeComponent();
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             var parameters = (Story)e.Parameter;
             uri = parameters.Uri;
-            viewer.Navigate(new Uri(parameters.Uri));
-            
-            StoryService ss = new StoryService();
-            foreach(String s in parameters.Categories)
+            viewer.Navigate(new Uri(uri));
+            //AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
+            progressRing.IsActive = true;
+            //await Task.Run(() => { waitForNavComplete.WaitOne(); });
+            progressRing.IsActive = false;
+            //waitForNavComplete.Reset();
+
+            foreach (String s in parameters.Categories)
             {
-                ss.addLike(s);
+                StoryService.addLike(s, App.loginid);
             }
         }
 
@@ -52,8 +58,8 @@ namespace NewsAggregator
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        { 
-            Frame.Navigate(typeof(Feed));
+        {
+            Frame.GoBack();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using NewsAggregator.Data;
 using NewsAggregator.Models;
+using NewsAggregator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,21 +31,23 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class Feed : Page
     {
+        NwsPaperViewModel nwsPaper { get; set; }
+
         public Feed()
         {
             this.InitializeComponent();
-            getStories();
+            nwsPaper = new NwsPaperViewModel();
         }
-        public async Task getStories()
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            NwsPaper np = new NwsPaper();
-            lvw.ItemsSource = np.Stories;
+            this.Frame.BackStack.Clear();
         }
 
         private void lvw_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var item = e.AddedItems?.FirstOrDefault();
-            Story s = (Story)item;
+            Story s = (StoryViewModel)item;
             Frame.Navigate(typeof(NwsViewer), s);
         }
     }
