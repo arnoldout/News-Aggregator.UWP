@@ -432,3 +432,8 @@ C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\o
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\NwsViewer.xaml
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\NwsViewer.xbf
 C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\HtmlAgilityPack.pdb
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Settings.xbf
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\Settings.g.i.cs
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\Settings.g.cs
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\Settings.xaml
+C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\obj\x86\Debug\Settings.xbf

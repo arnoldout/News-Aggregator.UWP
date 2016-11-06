@@ -13,14 +13,14 @@
             <RowDefinition Height="15*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#27292E">
-            <TextBlock Text="Personalized Stories" x:Name="headerText" Foreground="White" VerticalAlignment="Center" FontFamily="Helvetica" HorizontalAlignment="Center"/>
+            <TextBlock x:ConnectionId='3' Text="Personalized Stories" x:Name="headerText" Foreground="White" VerticalAlignment="Center" FontFamily="Helvetica" HorizontalAlignment="Center"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="16*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0" Background="#E54F4B">
-                    <Image VerticalAlignment="Stretch" Source="Assets/back_Arrow" x:Name="backArrow" HorizontalAlignment="Center" Tapped="Button_Click"/>
+                    <Image x:ConnectionId='4' VerticalAlignment="Stretch" Source="Assets/back_Arrow" x:Name="backArrow" HorizontalAlignment="Center"                      />
                 </Grid>
                 <Grid Grid.Column="1">
                     
@@ -28,8 +28,9 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
-            <WebView x:Name="viewer" NavigationStarting="viewer_NavigationStarting"  />
+            <WebView x:ConnectionId='2' x:Name="viewer"                                                 />
         </Grid>
-        <ProgressRing x:Name="progressRing"/>
+        <ProgressRing x:ConnectionId='1' x:Name="progressRing"/>
     </Grid>
 </Page>
+

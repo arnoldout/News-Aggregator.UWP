@@ -46,7 +46,7 @@ namespace NewsAggregator
             await AuthenticateFacebookAsync();
         }
         private async Task<String> AuthenticateFacebookAsync()
-        {
+        {/*
             //Facebook app id
             var clientId = "935566066588259";
             //Facebook permissions
@@ -92,7 +92,30 @@ namespace NewsAggregator
                 }
                 Frame.Navigate(typeof(Feed));
             }
-            //await ParseAuthenticationResult(result);
+            //await ParseAuthenticationResult(result);*/
+            string Sid = WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString();
+            FBSession session = FBSession.ActiveSession;
+            session.FBAppId = (935566066588259).ToString();
+            List<String> permissionList = new List<String>();//list of all the permissions needed from the user
+            permissionList.Add("public_profile");
+            permissionList.Add("email");
+
+            /*FBPermissions permissions = new FBPermissions(permissionList);
+            var result = await session.LoginAsync(permissions);
+            FacebookClient client = new FacebookClient(AccessToken);
+            dynamic results = await client.GetTaskAsync("https://graph.facebook.com/v2.7/me?fields=id,name,email&access_token=" + AccessToken);
+            dynamic email = results.email;
+            dynamic name = results.name;
+            Profile p = new Profile("faacebook" + email, name);
+            String loginStatus = await ProfileService.login(p);
+            if (loginStatus.Equals("false"))
+            {
+                loginStatus = await ProfileService.Write(p);
+                if (!loginStatus.Equals("false"))
+                {
+                    App.loginid = loginStatus;
+                }
+            }*/
             return "";
         }
 

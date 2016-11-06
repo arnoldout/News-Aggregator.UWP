@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -30,19 +31,21 @@ namespace NewsAggregator
         public NwsViewer()
         {
             this.InitializeComponent();
+            backArrow.Source= new BitmapImage(new Uri(this.BaseUri, "/Assets/back_Arrow.png"));
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             var parameters = (Story)e.Parameter;
             uri = parameters.Uri;
+            uri = uri + "?smid=fb-nytimes&smtyp=cur";
             viewer.Navigate(new Uri(uri));
-            //AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
+            AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
             progressRing.IsActive = true;
-            //await Task.Run(() => { waitForNavComplete.WaitOne(); });
+            await Task.Run(() => { waitForNavComplete.WaitOne(); });
             progressRing.IsActive = false;
-            //waitForNavComplete.Reset();
-
+            waitForNavComplete.Reset();
+            headerText.Text = parameters.Title;
             foreach (String s in parameters.Categories)
             {
                 StoryService.addLike(s, App.loginid);
@@ -53,7 +56,7 @@ namespace NewsAggregator
         {
             if(args.Uri!=null&&args.Uri != new Uri(uri))
             {
-                args.Cancel = true;
+                //args.Cancel = true;
             }
         }
 

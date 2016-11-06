@@ -22,15 +22,15 @@
                     <ColumnDefinition Width="16*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0" Background="#E54F4B">
-                    <Image x:Name="FBlogin"  VerticalAlignment="Top" HorizontalAlignment="Stretch" Tapped="button_Click"/>
+                    <Image x:ConnectionId='5' x:Name="FBlogin"  VerticalAlignment="Top" HorizontalAlignment="Stretch"                      />
                 </Grid>
                 <Grid Grid.Column="1">
                     <StackPanel VerticalAlignment="Center">
                         <StackPanel Padding="0,0,0,25">
-                            <TextBox x:Name="txtUsrName"  FontFamily="Helvetica"  Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Username" />
+                            <TextBox x:ConnectionId='4' x:Name="txtUsrName"  FontFamily="Helvetica"  Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Username" />
                         </StackPanel>
                         <StackPanel Padding="0,0,0,25">
-                            <TextBox x:Name="txtPasswrd" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Password" />
+                            <TextBox x:ConnectionId='3' x:Name="txtPasswrd" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Password" />
                         </StackPanel>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -38,10 +38,10 @@
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" Padding="0,0,5,0">
-                                <Button FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Login"  Click="Mongologin_Click"/>
+                                <Button x:ConnectionId='2' FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Login"                          />
                             </Grid>
                             <Grid Grid.Column="1" Padding="5,0,0,0">
-                                <Button x:Name="btnRegister" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Register" Click="register_Click" />
+                                <Button x:ConnectionId='1' x:Name="btnRegister" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Register"                        />
                             </Grid>
                         </Grid>
                     </StackPanel>
@@ -50,3 +50,4 @@
         </Grid>
     </Grid>
 </Page>
+
