@@ -32,12 +32,12 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class Feed : Page
     {
-        NwsPaperViewModel nwsPaper { get; set; }
+        NwsFeedViewModel nwsPaper { get; set; }
 
         public Feed()
         {
             this.InitializeComponent();
-            nwsPaper = new NwsPaperViewModel();
+            nwsPaper = new NwsFeedViewModel();
             settings.Source = new BitmapImage(new Uri(this.BaseUri, "/Assets/settings_icon.png"));
         }
         

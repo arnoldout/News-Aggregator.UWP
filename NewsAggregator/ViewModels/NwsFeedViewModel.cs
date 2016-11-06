@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace NewsAggregator.ViewModels
 {
-    class NwsPaperViewModel : NotificationBase
+    class NwsFeedViewModel : NotificationBase
     {
         NwsPaper nwsPaper;
         public Boolean isActive;
-        public NwsPaperViewModel()
+        public NwsFeedViewModel()
         {
             IsActive = true;
             asyncCreatePaper();
@@ -75,22 +75,5 @@ namespace NewsAggregator.ViewModels
         {
             nwsPaper.Update((StoryViewModel)sender);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
