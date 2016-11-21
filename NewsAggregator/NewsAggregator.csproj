@@ -126,7 +126,7 @@
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\NotificationBase.cs" />
-    <Compile Include="ViewModels\NwsPaperViewModel.cs" />
+    <Compile Include="ViewModels\NwsFeedViewModel.cs" />
     <Compile Include="ViewModels\Register.cs" />
     <Compile Include="ViewModels\StoryViewModel.cs" />
   </ItemGroup>

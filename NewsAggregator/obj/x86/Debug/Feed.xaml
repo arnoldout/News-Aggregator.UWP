@@ -9,7 +9,6 @@
     mc:Ignorable="d">
 
     <Grid>
-
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#E9EBEE" Offset="0.25"/>
@@ -30,7 +29,6 @@
                 <Grid Grid.Column="0" Background="#E54F4B">
                     <Image x:ConnectionId='4' VerticalAlignment="Stretch" x:Name="settings"                        HorizontalAlignment="Center"/>
                 </Grid>
-
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Padding="0,0,0,15">
@@ -54,7 +52,7 @@
                                         <Grid Grid.Row="0">
                                             <TextBlock Text="{Binding Title}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Top"  TextAlignment="Center" FontWeight="Bold" FontFamily="Helvetica"/>
                                         </Grid>
-                                        <Grid Grid.Row="1">
+                                        <Grid Grid.Row="1" Padding="0,5,0,0" >
                                             <TextBlock TextWrapping="Wrap" FontFamily="Helvetica" Text="{Binding Description}" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
                                         </Grid>
                                     </Grid>

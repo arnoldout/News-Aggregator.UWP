@@ -25,6 +25,9 @@ namespace NewsAggregator.ViewModels
             IsActive = false;
             _SelectedIndex = -1;
             // Load the database
+            Random rnd = new Random();
+            nwsPaper.Stories = nwsPaper.Stories.OrderBy(x => rnd.Next()).ToList();
+
             foreach (var story in nwsPaper.Stories)
             {
                 var np = new StoryViewModel(story);

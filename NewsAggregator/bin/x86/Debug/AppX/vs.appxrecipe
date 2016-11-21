@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-05T16:39:01.946</Modified>
+      <Modified>2016-11-21T12:46:36.118</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.exe">
       <PackagePath>entrypoint\NewsAggregator.exe</PackagePath>
-      <Modified>2016-11-05T16:39:00.936</Modified>
+      <Modified>2016-11-21T12:46:34.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -576,7 +576,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
       <PackagePath>NewsAggregator.xr.xml</PackagePath>
-      <Modified>2016-11-05T16:35:36.586</Modified>
+      <Modified>2016-11-21T12:23:15.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -589,11 +589,11 @@
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-05T16:39:01.430</Modified>
+      <Modified>2016-11-21T12:46:35.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\NewsAggregator.exe">
       <PackagePath>NewsAggregator.exe</PackagePath>
-      <Modified>2016-11-05T16:39:01.941</Modified>
+      <Modified>2016-11-21T12:46:36.114</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
