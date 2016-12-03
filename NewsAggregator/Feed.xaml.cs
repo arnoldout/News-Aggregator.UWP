@@ -38,6 +38,7 @@ namespace NewsAggregator
         {
             this.InitializeComponent();
             nwsPaper = new NwsFeedViewModel();
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
             settings.Source = new BitmapImage(new Uri(this.BaseUri, "/Assets/settings_icon.png"));
         }
         

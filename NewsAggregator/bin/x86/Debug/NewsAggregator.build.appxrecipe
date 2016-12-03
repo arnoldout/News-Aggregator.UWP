@@ -85,6 +85,9 @@
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Microsoft.Win32.Primitives\4.0.0\lib\dotnet\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Mntone.SvgForXaml\0.9.0\lib\uap10.0\Mntone.SvgForXaml.dll">
+      <PackagePath>Mntone.SvgForXaml.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Newtonsoft.Json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
@@ -352,8 +355,17 @@
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Win2D.uwp\1.19.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb.dll">
       <PackagePath>winsdkfb.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Win2D.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\lib\win10\winsdkfb.winmd">
+      <PackagePath>winsdkfb.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb\Controls\FacebookLoginButton.xbf">
       <PackagePath>FacebookLoginButton.xbf</PackagePath>
@@ -373,9 +385,6 @@
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb\Images\fb_blank_profile_portrait.png">
       <PackagePath>fb_blank_profile_portrait.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\lib\win10\winsdkfb.winmd">
-      <PackagePath>winsdkfb.winmd</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
@@ -384,6 +393,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\settings_icon.png">
       <PackagePath>Assets\settings_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\The Daily Feed Logo.png">
+      <PackagePath>Assets\The Daily Feed Logo.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\White.png">
       <PackagePath>Assets\White.png</PackagePath>
@@ -424,6 +436,9 @@
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\logo.jpg">
       <PackagePath>Assets\logo.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\The Daily Feed Logo.svg">
+      <PackagePath>Assets\The Daily Feed Logo.svg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Facebook Icon.ico">
       <PackagePath>Assets\Facebook Icon.ico</PackagePath>
     </AppxPackagedFile>
@@ -438,6 +453,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb\Images\fb_blank_profile_portrait.png">
       <PackagePath>winsdkfb\Images\fb_blank_profile_portrait.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Mntone.SvgForXaml\0.9.0\lib\uap10.0\Mntone.SvgForXaml\Mntone.SvgForXaml.xr.xml">
+      <PackagePath>Mntone.SvgForXaml\Mntone.SvgForXaml.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

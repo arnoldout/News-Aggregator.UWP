@@ -5,6 +5,7 @@
     xmlns:local="using:NewsAggregator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:svg="Mntone.SvgForXaml.UI.Xaml"
     mc:Ignorable="d">
 
     <Grid>
@@ -25,12 +26,13 @@
                     <Image x:Name="FBlogin"  VerticalAlignment="Top" HorizontalAlignment="Stretch" Tapped="button_Click"/>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <StackPanel VerticalAlignment="Center">
+                    <Image x:Name="imgTitle" VerticalAlignment="Top" Margin="0,80,0,0" />
+                    <StackPanel VerticalAlignment="Bottom" Padding="0,0,0,100">
                         <StackPanel Padding="0,0,0,25">
                             <TextBox x:Name="txtUsrName"  FontFamily="Helvetica"  Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Username" />
                         </StackPanel>
                         <StackPanel Padding="0,0,0,25">
-                            <TextBox x:Name="txtPasswrd" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Password" />
+                            <PasswordBox x:Name="txtPasswrd"  FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" PlaceholderText="Enter Password" />
                         </StackPanel>
                         <Grid>
                             <Grid.ColumnDefinitions>

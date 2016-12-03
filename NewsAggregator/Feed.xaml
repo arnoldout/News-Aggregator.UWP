@@ -33,6 +33,7 @@
         </Grid>
         <Grid Grid.Row="1" Padding="0,0,0,15">
             <ProgressRing IsActive="{x:Bind nwsPaper.IsActive, Mode=TwoWay}"/>
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Top" Text="{x:Bind nwsPaper.DefText, Mode=OneWay}"/>
             <ListView x:Name="lvw" HorizontalAlignment="Stretch" VerticalAlignment="Top" ItemsSource="{x:Bind nwsPaper.StoryCollection, Mode=OneWay}"
                   SelectionChanged="lvw_SelectionChanged">
                 <ListView.ItemTemplate>
@@ -40,24 +41,19 @@
                         <Border BorderBrush="Black" BorderThickness="1,1,1,1">
                             <StackPanel HorizontalAlignment="Stretch" >
                                 <Grid Padding="0,0,10,0" CornerRadius="5" Background="#FFFFFF" >
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="3*"></RowDefinition>
-                                            <RowDefinition Height="7*"></RowDefinition>
-                                        </Grid.RowDefinitions>
-                                        <Grid Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="3*"></RowDefinition>
+                                        <RowDefinition Height="5*"></RowDefinition>
+                                        <RowDefinition Height="7*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="1">
+                                        <Image Source="{Binding ImgUri}"/>
+                                    </Grid>
+                                    <Grid Grid.Row="0" Grid.Column="0">
                                             <TextBlock Text="{Binding Title}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Top"  TextAlignment="Center" FontWeight="Bold" FontFamily="Helvetica"/>
                                         </Grid>
-                                        <Grid Grid.Row="1" Padding="0,5,0,0" >
-                                            <TextBlock TextWrapping="Wrap" FontFamily="Helvetica" Text="{Binding Description}" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid Grid.Column="1" Padding="5,0">
-                                        <Image Source="{Binding ImgUri}"/>
+                                    <Grid Grid.Row="2" Grid.Column="1" Padding="0,5,0,0" >
+                                        <TextBlock TextWrapping="Wrap" FontFamily="Helvetica" Text="{Binding Description}" TextAlignment="Justify" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
                                     </Grid>
                                 </Grid>
                             </StackPanel>

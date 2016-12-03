@@ -11,14 +11,16 @@ namespace NewsAggregator.Models
     class NwsPaper
     {
         public List<Story> Stories { get; set; }
+        
         public NwsPaper()
         {
             Stories = new List<Story>();
         }
         public async Task getStories()
-        {
+        {            
             Stories = await StoryService.getStories(App.loginid);
         }
+        
         public void addLike(String like)
         {
             StoryService.addLike(like, App.loginid);

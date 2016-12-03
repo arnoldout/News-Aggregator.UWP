@@ -1,5 +1,6 @@
 ﻿using NewsAggregator.Data;
 using NewsAggregator.Models;
+using NewsAggregator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +28,7 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class NwsViewer : Page
     {
+        ResultViewModel storyView { get; set; }
         public String uri;
         public NwsViewer()
         {
@@ -36,14 +38,15 @@ namespace NewsAggregator
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            var parameters = (Story)e.Parameter;
+            Story parameters = (Story)e.Parameter;
+            storyView = new ResultViewModel(parameters);
             uri = parameters.Uri;
             uri = uri + "?smid=fb-nytimes&smtyp=cur";
             viewer.Navigate(new Uri(uri));
             AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
-            progressRing.IsActive = true;
+            //progressRing.IsActive = true;
             await Task.Run(() => { waitForNavComplete.WaitOne(); });
-            progressRing.IsActive = false;
+            //progressRing.IsActive = false;
             waitForNavComplete.Reset();
             headerText.Text = parameters.Title;
             foreach (String s in parameters.Categories)

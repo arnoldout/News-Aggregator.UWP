@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>9D83B241843CBF7C8EF0AB500E8E2E8E1346F0DAC4AA61E1F389754D0F4AFF51</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>395D9BEBAE133070081CA044BD195CC7FC221DF2D4811C51E19ADDED1DD9AA7E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>43030arnoldout.Nws_1.1.0.0_x86__rmt0gkmpkhxej</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>43030arnoldout.Nws_rmt0gkmpkhxej!App</RegisteredUserModeAppID>
     <RegisteredPackageID>43030arnoldout.Nws</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-21T12:46:36.118</Modified>
+      <Modified>2016-12-03T15:30:16.094</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.exe">
       <PackagePath>entrypoint\NewsAggregator.exe</PackagePath>
-      <Modified>2016-11-21T12:46:34.369</Modified>
+      <Modified>2016-12-03T15:30:13.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -115,6 +115,10 @@
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Microsoft.Win32.Primitives\4.0.0\lib\dotnet\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
       <Modified>2016-01-15T14:34:00.877</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Mntone.SvgForXaml\0.9.0\lib\uap10.0\Mntone.SvgForXaml.dll">
+      <PackagePath>Mntone.SvgForXaml.dll</PackagePath>
+      <Modified>2015-12-25T10:20:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Newtonsoft.Json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -472,9 +476,21 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-01-15T14:34:13.219</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Win2D.uwp\1.19.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+      <Modified>2016-08-09T07:14:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb.dll">
       <PackagePath>winsdkfb.dll</PackagePath>
       <Modified>2016-09-29T19:35:34.607</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Win2D.uwp\1.19.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+      <Modified>2016-08-09T07:14:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\lib\win10\winsdkfb.winmd">
+      <PackagePath>winsdkfb.winmd</PackagePath>
+      <Modified>2016-09-29T19:35:34.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\runtimes\win10-x86\native\winsdkfb\Controls\FacebookLoginButton.xbf">
       <PackagePath>FacebookLoginButton.xbf</PackagePath>
@@ -500,10 +516,6 @@
       <PackagePath>fb_blank_profile_portrait.png</PackagePath>
       <Modified>2016-09-29T19:35:34.624</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\winsdkfb\0.11.20160720.1\lib\win10\winsdkfb.winmd">
-      <PackagePath>winsdkfb.winmd</PackagePath>
-      <Modified>2016-09-29T19:35:34.498</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-09-28T18:26:27.637</Modified>
@@ -515,6 +527,10 @@
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\settings_icon.png">
       <PackagePath>Assets\settings_icon.png</PackagePath>
       <Modified>2016-10-25T15:04:06.163</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\The Daily Feed Logo.png">
+      <PackagePath>Assets\The Daily Feed Logo.png</PackagePath>
+      <Modified>2016-11-24T15:36:07.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\White.png">
       <PackagePath>Assets\White.png</PackagePath>
@@ -566,6 +582,10 @@
       <PackagePath>Assets\logo.jpg</PackagePath>
       <Modified>2016-10-23T18:33:30.728</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\The Daily Feed Logo.svg">
+      <PackagePath>Assets\The Daily Feed Logo.svg</PackagePath>
+      <Modified>2016-11-23T15:30:42.082</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\Assets\Facebook Icon.ico">
       <PackagePath>Assets\Facebook Icon.ico</PackagePath>
       <Modified>2016-10-23T15:19:38.485</Modified>
@@ -576,7 +596,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\NewsAggregator.xr.xml">
       <PackagePath>NewsAggregator.xr.xml</PackagePath>
-      <Modified>2016-11-21T12:23:15.117</Modified>
+      <Modified>2016-12-03T12:19:35.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -586,14 +606,18 @@
       <PackagePath>winsdkfb\Images\fb_blank_profile_portrait.png</PackagePath>
       <Modified>2016-09-29T19:35:34.624</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Olivr\.nuget\packages\Mntone.SvgForXaml\0.9.0\lib\uap10.0\Mntone.SvgForXaml\Mntone.SvgForXaml.xr.xml">
+      <PackagePath>Mntone.SvgForXaml\Mntone.SvgForXaml.xr.xml</PackagePath>
+      <Modified>2015-12-25T10:20:16.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-21T12:46:35.466</Modified>
+      <Modified>2016-12-03T15:30:15.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\bin\x86\Debug\Core\NewsAggregator.exe">
       <PackagePath>NewsAggregator.exe</PackagePath>
-      <Modified>2016-11-21T12:46:36.114</Modified>
+      <Modified>2016-12-03T15:30:16.077</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

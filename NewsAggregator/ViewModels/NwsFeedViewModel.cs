@@ -13,9 +13,11 @@ namespace NewsAggregator.ViewModels
     {
         NwsPaper nwsPaper;
         public Boolean isActive;
+        public String defText;
         public NwsFeedViewModel()
-        {
+        { 
             IsActive = true;
+            DefText = "No stories displayed\nPlease add some more likes";
             asyncCreatePaper();
         }
         public async Task asyncCreatePaper()
@@ -23,6 +25,10 @@ namespace NewsAggregator.ViewModels
             nwsPaper = new NwsPaper();
             await nwsPaper.getStories();
             IsActive = false;
+            if(nwsPaper.Stories.Count>0)
+            {
+               DefText = "";
+            }
             _SelectedIndex = -1;
             // Load the database
             Random rnd = new Random();
@@ -48,6 +54,15 @@ namespace NewsAggregator.ViewModels
             set
             {
                 if (SetProperty(ref isActive, value))
+                { RaisePropertyChanged(nameof(SelectedStory)); }
+            }
+        }
+        public String DefText
+        {
+            get { return defText; }
+            set
+            {
+                if (SetProperty(ref defText, value))
                 { RaisePropertyChanged(nameof(SelectedStory)); }
             }
         }
