@@ -1,1 +1,0 @@
-C:\Users\Olivr\College\Mobile Programming\NwsAggregatorFrontEnd\NewsAggregator\NewsAggregator.csproj;x86
