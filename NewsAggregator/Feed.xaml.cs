@@ -56,6 +56,7 @@ namespace NewsAggregator
 
         private void goToSettings(object sender, TappedRoutedEventArgs e)
         {
+            this.NavigationCacheMode = NavigationCacheMode.Disabled;
             Frame.Navigate(typeof(Settings));
         }
     }

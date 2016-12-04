@@ -29,7 +29,6 @@ namespace NewsAggregator
     public sealed partial class NwsViewer : Page
     {
         ResultViewModel storyView { get; set; }
-        public String uri;
         public NwsViewer()
         {
             this.InitializeComponent();
@@ -40,24 +39,13 @@ namespace NewsAggregator
             base.OnNavigatedTo(e);
             Story parameters = (Story)e.Parameter;
             storyView = new ResultViewModel(parameters);
-            uri = parameters.Uri;
-            uri = uri + "?smid=fb-nytimes&smtyp=cur";
+            String uri = parameters.Uri;
             viewer.Navigate(new Uri(uri));
-            AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
-            //progressRing.IsActive = true;
-            await Task.Run(() => { waitForNavComplete.WaitOne(); });
-            //progressRing.IsActive = false;
-            waitForNavComplete.Reset();
-            headerText.Text = parameters.Title;
-            foreach (String s in parameters.Categories)
-            {
-                StoryService.addLike(s, App.loginid);
-            }
         }
 
         private void viewer_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            if(args.Uri!=null&&args.Uri != new Uri(uri))
+            if(args.Uri!=null&&args.Uri != (storyView.uri))
             {
                 //args.Cancel = true;
             }

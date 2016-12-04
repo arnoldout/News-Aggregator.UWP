@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NewsAggregator.Models;
+using System.Threading;
+using NewsAggregator.Data;
 
 namespace NewsAggregator.ViewModels
 {
@@ -12,23 +14,42 @@ namespace NewsAggregator.ViewModels
     {
         public Boolean isActive;
         private Story parameters;
-        
+        public Uri uri;
         public ResultViewModel(Story parameters)
         {
             IsActive = true;
-            waiter();
             this.parameters = parameters;
+            String sUri = parameters.Uri;
+            uri = (new Uri(sUri));
+            AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
+            IsActive = true;
+            ThreadNavigater(waitForNavComplete);
+            
+            //headerText.Text = parameters.Title;
+            foreach (String s in parameters.Categories)
+            {
+                StoryService.addLike(s, App.loginid);
+            }
+        }
+        
+        public async Task ThreadNavigater(AutoResetEvent waitForNavComplete)
+        {
+            await Task.Delay(1000);
+            IsActive = false;
+            await Task.Run(() => { waitForNavComplete.WaitOne(); });
+            waitForNavComplete.Reset();
+            
         }
 
-        public async Task waiter()
-        {
-            await Task.Delay(5000);
-            IsActive = false;
-        }
-        public Boolean IsActive
+            public Boolean IsActive
         {
             get { return isActive; }
-            set { SetProperty(IsActive, value, () => IsActive= value); }
-        }
+            set
+            {
+                isActive = value;
+                RaisePropertyChanged("IsActive");
+            }
+        
+    }
     }
 }

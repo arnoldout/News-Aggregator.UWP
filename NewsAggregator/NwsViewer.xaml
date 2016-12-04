@@ -29,7 +29,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <WebView x:Name="viewer" NavigationStarting="viewer_NavigationStarting"  />
-            <ProgressRing IsActive="{x:Bind storyView.isActive, Mode=OneWay}"/>
+            <ProgressRing IsActive="{x:Bind storyView.IsActive, Mode=OneWay}"/>
         </Grid>
     </Grid>
 </Page>

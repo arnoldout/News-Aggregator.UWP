@@ -46,10 +46,12 @@
                                         <RowDefinition Height="5*"></RowDefinition>
                                         <RowDefinition Height="7*"></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Grid Grid.Row="1">
-                                        <Image Source="{Binding ImgUri}"/>
+                                    <Grid Grid.Row="0">
+                                        <Viewbox StretchDirection="DownOnly">
+                                            <Image Source="{Binding ImgUri}"/>
+                                        </Viewbox>
                                     </Grid>
-                                    <Grid Grid.Row="0" Grid.Column="0">
+                                    <Grid Grid.Row="1" Grid.Column="0">
                                             <TextBlock Text="{Binding Title}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Top"  TextAlignment="Center" FontWeight="Bold" FontFamily="Helvetica"/>
                                         </Grid>
                                     <Grid Grid.Row="2" Grid.Column="1" Padding="0,5,0,0" >
