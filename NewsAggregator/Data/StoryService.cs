@@ -13,12 +13,9 @@ namespace NewsAggregator.Data
 {
     class StoryService
     {
-        public static void update(Story s)
-        {
-            //update something
-        }
         public static async Task<List<Story>> getStories(String id)
         {
+            //get all stories linked to user's account
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));
             String url = App.apiURL + "getArticles/" + id;
             WebRequest wrGETURL = WebRequest.Create(url);
@@ -29,6 +26,7 @@ namespace NewsAggregator.Data
             StreamReader objReader = new StreamReader(dataStream);
             dynamic dynStories = JsonConvert.DeserializeObject(objReader.ReadToEnd());
             List<Story> stories = new List<Story>();
+            //parse each story
             foreach (dynamic d in dynStories)
             {
                 dynamic dd = d.categories;
@@ -37,15 +35,18 @@ namespace NewsAggregator.Data
                 {
                     categories.Add(ddd);
                 }
+                //add story to list
                 stories.Add(new Story(System.Convert.ToString(d.title), System.Convert.ToString(d.description), System.Convert.ToString(d.uri), categories, System.Convert.ToString(d.imgUri)));
 
             }
+            //return all stories
             return stories;
 
         }
         public static void addLike(String like, String id)
         {
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Story));
+            //add like to user's account
             String url = App.apiURL + "addLike/" + id + "/" + like;
             WebRequest wrGETURL = WebRequest.Create(url);
             wrGETURL.Proxy = null;

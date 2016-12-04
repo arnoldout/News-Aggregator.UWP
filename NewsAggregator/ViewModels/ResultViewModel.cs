@@ -19,29 +19,19 @@ namespace NewsAggregator.ViewModels
         {
             IsActive = true;
             this.parameters = parameters;
-            String sUri = parameters.Uri;
-            uri = (new Uri(sUri));
-            AutoResetEvent waitForNavComplete = new AutoResetEvent(false);
-            IsActive = true;
-            ThreadNavigater(waitForNavComplete);
-            
-            //headerText.Text = parameters.Title;
+            uri = (new Uri(parameters.Uri));
+
             foreach (String s in parameters.Categories)
             {
                 StoryService.addLike(s, App.loginid);
             }
         }
-        
-        public async Task ThreadNavigater(AutoResetEvent waitForNavComplete)
+        public void switchIsActive()
         {
-            await Task.Delay(1000);
-            IsActive = false;
-            await Task.Run(() => { waitForNavComplete.WaitOne(); });
-            waitForNavComplete.Reset();
-            
+            IsActive = (IsActive)? false: true;
         }
 
-            public Boolean IsActive
+        public Boolean IsActive
         {
             get { return isActive; }
             set
@@ -49,7 +39,15 @@ namespace NewsAggregator.ViewModels
                 isActive = value;
                 RaisePropertyChanged("IsActive");
             }
-        
-    }
+        }
+        public Uri Uri
+        {
+            get { return uri; }
+            set
+            {
+                uri = value;
+                RaisePropertyChanged("Uri");
+            }
+        }
     }
 }

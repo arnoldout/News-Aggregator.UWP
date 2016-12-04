@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace NewsAggregator.Models
 {
+    //news story object
     class Story
     {
         private String title;

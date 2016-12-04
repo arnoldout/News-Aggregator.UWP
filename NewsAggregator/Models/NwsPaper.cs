@@ -32,10 +32,5 @@ namespace NewsAggregator.Models
                 Stories.Add(story);
             }
         }
-
-        internal void Update(Story sender)
-        {
-            StoryService.update(sender);
-        }
     }
 }

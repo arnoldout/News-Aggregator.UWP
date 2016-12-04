@@ -38,17 +38,22 @@ namespace NewsAggregator
         {
             this.InitializeComponent();
             nwsPaper = new NwsFeedViewModel();
+            //keep page cached for when navigating back
             this.NavigationCacheMode = NavigationCacheMode.Enabled;
             settings.Source = new BitmapImage(new Uri(this.BaseUri, "/Assets/settings_icon.png"));
         }
         
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //clear backstack on back navigation
+
+            //videos playing on nwsviewer would otherwise continue playing in the background
             this.Frame.BackStack.Clear();
         }
 
         private void lvw_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //open nwsviewer page displaying the selected story
             var item = e.AddedItems?.FirstOrDefault();
             Story s = (StoryViewModel)item;
             Frame.Navigate(typeof(NwsViewer), s);
@@ -56,6 +61,9 @@ namespace NewsAggregator
 
         private void goToSettings(object sender, TappedRoutedEventArgs e)
         {
+            //navigate to settings page, turn off caching
+            //user can add new likes there, user will have new news stories,
+            //listview will need to be reloaded on return
             this.NavigationCacheMode = NavigationCacheMode.Disabled;
             Frame.Navigate(typeof(Settings));
         }

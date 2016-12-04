@@ -36,8 +36,10 @@ namespace NewsAggregator
         }
         public async void getLikes()
         {
+            //populate suggestions box
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(String));
 
+            //make get request to api
             String url = App.apiURL + "allLikes";
             WebRequest wrGETURL = WebRequest.Create(url);
             wrGETURL.Proxy = null;
@@ -49,11 +51,13 @@ namespace NewsAggregator
             dynamic articleLikes = likes.articles;
             possLikes = articleLikes[0].ToObject<List<String>>();
             possLikes.Sort();
+            //display available topics
             suggestionBox.ItemsSource = possLikes;
         }
 
         private void suggestionBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
+            //update suggestions box as user enters text
             var Auto = (AutoSuggestBox)sender;
             if (Auto.Items.Count > 0)
             {
@@ -73,6 +77,7 @@ namespace NewsAggregator
        
         private void suggestionBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
+            //take user's suggestion, add to their account
             var Auto = (AutoSuggestBox)sender;
             if (args.ChosenSuggestion != null&&(!args.ChosenSuggestion.Equals("No Results")))
             {
@@ -88,6 +93,7 @@ namespace NewsAggregator
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //return to Feed
             Frame.GoBack();
         }
     }

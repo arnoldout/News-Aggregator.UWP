@@ -9,6 +9,7 @@ namespace NewsAggregator.ViewModels
 {
     class StoryViewModel : NotificationBase<Story>
     {
+        //properties for story
         public StoryViewModel(Story story = null) : base(story) { }
         public String Title
         {

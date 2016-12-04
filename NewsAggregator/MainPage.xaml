@@ -27,6 +27,7 @@
                 </Grid>
                 <Grid Grid.Column="1">
                     <Image x:Name="imgTitle" VerticalAlignment="Top" Margin="0,80,0,0" />
+                    <ProgressRing x:Name="progLogin" IsActive="{x:Bind loginVM.IsActive, Mode=OneWay}"/>
                     <StackPanel VerticalAlignment="Bottom" Padding="0,0,0,100">
                         <StackPanel Padding="0,0,0,25">
                             <TextBox x:Name="txtUsrName"  FontFamily="Helvetica"  Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Username" />

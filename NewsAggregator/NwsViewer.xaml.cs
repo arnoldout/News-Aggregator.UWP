@@ -45,15 +45,20 @@ namespace NewsAggregator
 
         private void viewer_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            if(args.Uri!=null&&args.Uri != (storyView.uri))
+            /*if(args.Uri!=null&&args.Uri != (storyView.uri))
             {
                 //args.Cancel = true;
-            }
+            }*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
+        }
+
+        private void viewer_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            storyView.switchIsActive();
         }
     }
 }
