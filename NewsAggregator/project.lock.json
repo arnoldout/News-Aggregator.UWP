@@ -320,6 +320,18 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -1946,6 +1958,29 @@
           }
         }
       },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          }
+        }
+      },
       "winsdkfb/0.11.20160720.1": {
         "type": "package",
         "compile": {
@@ -2365,6 +2400,18 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -3855,6 +3902,18 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "winsdkfb/0.11.20160720.1": {
         "type": "package",
         "compile": {
@@ -4170,6 +4229,18 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -5637,6 +5708,18 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
       "winsdkfb/0.11.20160720.1": {
@@ -5977,6 +6060,18 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -7467,6 +7562,18 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "winsdkfb/0.11.20160720.1": {
         "type": "package",
         "compile": {
@@ -7782,6 +7889,18 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -9249,6 +9368,18 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
       "winsdkfb/0.11.20160720.1": {
@@ -9589,6 +9720,18 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        }
+      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
@@ -11079,6 +11222,18 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
       "winsdkfb/0.11.20160720.1": {
         "type": "package",
         "compile": {
@@ -11394,6 +11549,18 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Mntone.SvgForXaml/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.10.0"
+        },
+        "compile": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Mntone.SvgForXaml.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -12861,6 +13028,18 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
       },
       "winsdkfb/0.11.20160720.1": {
@@ -13652,6 +13831,47 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "Mntone.SvgForXaml/0.9.0": {
+      "sha512": "dFmUOnEvMAqciO9tigvqR2DbNouc8HEge2og4mF4FjejpI1MHDy8fFzAecRThd0jTXwg9VpoZjM6EFKXJgU3Ig==",
+      "type": "package",
+      "files": [
+        "Mntone.SvgForXaml.0.9.0.nupkg.sha512",
+        "Mntone.SvgForXaml.nuspec",
+        "build/uap10.0/Mntone.SvgForXaml.targets",
+        "build/win81/Mntone.SvgForXaml.targets",
+        "build/wpa81/Mntone.SvgForXaml.targets",
+        "lib/uap10.0/Mntone.SvgForXaml.dll",
+        "lib/uap10.0/Mntone.SvgForXaml.pri",
+        "lib/uap10.0/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/uap10.0/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/uap10.0/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf",
+        "lib/win81/ARM/Mntone.SvgForXaml.dll",
+        "lib/win81/ARM/Mntone.SvgForXaml.pri",
+        "lib/win81/ARM/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/win81/ARM/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/win81/ARM/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf",
+        "lib/win81/x64/Mntone.SvgForXaml.dll",
+        "lib/win81/x64/Mntone.SvgForXaml.pri",
+        "lib/win81/x64/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/win81/x64/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/win81/x64/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf",
+        "lib/win81/x86/Mntone.SvgForXaml.dll",
+        "lib/win81/x86/Mntone.SvgForXaml.pri",
+        "lib/win81/x86/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/win81/x86/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/win81/x86/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf",
+        "lib/wpa81/ARM/Mntone.SvgForXaml.dll",
+        "lib/wpa81/ARM/Mntone.SvgForXaml.pri",
+        "lib/wpa81/ARM/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/wpa81/ARM/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/wpa81/ARM/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf",
+        "lib/wpa81/x86/Mntone.SvgForXaml.dll",
+        "lib/wpa81/x86/Mntone.SvgForXaml.pri",
+        "lib/wpa81/x86/Mntone.SvgForXaml/Mntone.SvgForXaml.xr.xml",
+        "lib/wpa81/x86/Mntone.SvgForXaml/Themes/Generic.xbf",
+        "lib/wpa81/x86/Mntone.SvgForXaml/UI/Xaml/SvgImage.xbf"
       ]
     },
     "Newtonsoft.Json/9.0.1": {
@@ -16374,6 +16594,23 @@
         "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
+    "Win2D.uwp/1.19.0": {
+      "sha512": "pLL/gLb3uY75IlswAKzOvQnwwiGrMxZyBl2DbJOjuzG6SOWMp0sg+tkj+HZU8uyQ8jIdAbOE0Iu5+z9zyT5E6Q==",
+      "type": "package",
+      "files": [
+        "Win2D.uwp.1.19.0.nupkg.sha512",
+        "Win2D.uwp.nuspec",
+        "Win2d.githash.txt",
+        "build/native/Win2D.uwp.targets",
+        "include/Microsoft.Graphics.Canvas.h",
+        "include/Microsoft.Graphics.Canvas.native.h",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.winmd",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.xml",
+        "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll"
+      ]
+    },
     "winsdkfb/0.11.20160720.1": {
       "sha512": "w8kKfY6AhkBdYTX+pslhh8MwhBcIPZfIgXoib+pNgP25BceM2ai0yKGT1eMg1TLL9Hg6f4wjUFk4heoUmSqVxQ==",
       "type": "Package",
@@ -16429,7 +16666,9 @@
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
+      "Mntone.SvgForXaml >= 0.9.0",
       "Newtonsoft.Json >= 9.0.1",
+      "Win2D.uwp >= 1.19.0",
       "winsdkfb >= 0.11.20160720.1"
     ],
     "UAP,Version=v10.0": []

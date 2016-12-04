@@ -1,5 +1,6 @@
 ﻿using NewsAggregator.Data;
 using NewsAggregator.Models;
+using NewsAggregator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,6 +20,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -30,22 +32,40 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class Feed : Page
     {
+        NwsFeedViewModel nwsPaper { get; set; }
+
         public Feed()
         {
             this.InitializeComponent();
-            getStories();
+            nwsPaper = new NwsFeedViewModel();
+            //keep page cached for when navigating back
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
+            settings.Source = new BitmapImage(new Uri(this.BaseUri, "/Assets/settings_icon.png"));
         }
-        public async Task getStories()
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            NwsPaper np = new NwsPaper();
-            lvw.ItemsSource = np.Stories;
+            //clear backstack on back navigation
+
+            //videos playing on nwsviewer would otherwise continue playing in the background
+            this.Frame.BackStack.Clear();
         }
 
         private void lvw_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //open nwsviewer page displaying the selected story
             var item = e.AddedItems?.FirstOrDefault();
-            Story s = (Story)item;
+            Story s = (StoryViewModel)item;
             Frame.Navigate(typeof(NwsViewer), s);
+        }
+
+        private void goToSettings(object sender, TappedRoutedEventArgs e)
+        {
+            //navigate to settings page, turn off caching
+            //user can add new likes there, user will have new news stories,
+            //listview will need to be reloaded on return
+            this.NavigationCacheMode = NavigationCacheMode.Disabled;
+            Frame.Navigate(typeof(Settings));
         }
     }
 }

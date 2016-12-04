@@ -5,22 +5,51 @@
     xmlns:local="using:NewsAggregator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:svg="Mntone.SvgForXaml.UI.Xaml"
     mc:Ignorable="d">
 
     <Grid>
+
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#F5F5F5" Offset="0.25"/>
                 <GradientStop Color="#F5F5F5" Offset="0.0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="FBlogin" Content="Login to Facebook" HorizontalAlignment="Left" Margin="192,339,0,0" VerticalAlignment="Top" Click="button_Click"/>
-
-        <TextBox x:Name="usrName" HorizontalAlignment="Left" Margin="144,141,0,0" TextWrapping="Wrap" PlaceholderText="Username" VerticalAlignment="Top" Background="{ThemeResource ListViewItemDragForegroundThemeBrush}"/>
-
-        <TextBox x:Name="passwrd" HorizontalAlignment="Left" Margin="144,228,0,0" TextWrapping="Wrap" PlaceholderText="Password" VerticalAlignment="Top" />
-        <Button x:Name="register" Content="Register"  HorizontalAlignment="Left" Margin="77,339,0,0" VerticalAlignment="Top" Click="register_Click" />
-        <Button x:Name="Mongologin" Content="Login" HorizontalAlignment="Left" Margin="166,431,0,0" VerticalAlignment="Top" Click="Mongologin_Click"/>
-
+        <Grid Grid.Row="0" Background="#27292E">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="16*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Background="#E54F4B">
+                    <Image x:Name="FBlogin"  VerticalAlignment="Top" HorizontalAlignment="Stretch" Tapped="button_Click"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image x:Name="imgTitle" VerticalAlignment="Top" Margin="0,80,0,0" />
+                    <ProgressRing x:Name="progLogin" IsActive="{x:Bind loginVM.IsActive, Mode=OneWay}"/>
+                    <StackPanel VerticalAlignment="Bottom" Padding="0,0,0,100">
+                        <StackPanel Padding="0,0,0,25">
+                            <TextBox x:Name="txtUsrName"  FontFamily="Helvetica"  Background="#EAEAEA" HorizontalAlignment="Stretch" TextWrapping="Wrap" PlaceholderText="Enter Username" />
+                        </StackPanel>
+                        <StackPanel Padding="0,0,0,25">
+                            <PasswordBox x:Name="txtPasswrd"  FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" PlaceholderText="Enter Password" />
+                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Padding="0,0,5,0">
+                                <Button FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Login"  Click="Mongologin_Click"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Padding="5,0,0,0">
+                                <Button x:Name="btnRegister" FontFamily="Helvetica" Background="#EAEAEA" HorizontalAlignment="Stretch" Content="Register" Click="register_Click" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

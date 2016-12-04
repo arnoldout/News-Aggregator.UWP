@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="NewsAggregator.Feed"
     xmlns:viewModels="using:NewsAggregator.ViewModels"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -27,17 +27,17 @@
                     <ColumnDefinition Width="16*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0" Background="#E54F4B">
-                    <Image VerticalAlignment="Stretch" x:Name="settings" Tapped="goToSettings"  HorizontalAlignment="Center"/>
+                    <Image x:ConnectionId='5' VerticalAlignment="Stretch" x:Name="settings"                        HorizontalAlignment="Center"/>
                 </Grid>
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Padding="0,0,0,15">
-            <ProgressRing IsActive="{x:Bind nwsPaper.IsActive, Mode=TwoWay}"/>
-            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Top" Text="{x:Bind nwsPaper.DefText, Mode=OneWay}"/>
-            <ListView x:Name="lvw" HorizontalAlignment="Stretch" VerticalAlignment="Top" ItemsSource="{x:Bind nwsPaper.StoryCollection, Mode=OneWay}"
-                  SelectionChanged="lvw_SelectionChanged">
+            <ProgressRing x:ConnectionId='2'                                                   />
+            <TextBlock x:ConnectionId='3' HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Top"                                              />
+            <ListView x:ConnectionId='4' x:Name="lvw" HorizontalAlignment="Stretch" VerticalAlignment="Top"                                                             
+                                                         >
                 <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="viewModels:StoryViewModel">
+                    <DataTemplate                                       >
                         <Border BorderBrush="Black" BorderThickness="1,1,1,1">
                             <StackPanel HorizontalAlignment="Stretch" >
                                 <Grid Padding="0,0,10,0" CornerRadius="5" Background="#FFFFFF" >
@@ -74,3 +74,4 @@
     </Grid>
 
 </Page>
+

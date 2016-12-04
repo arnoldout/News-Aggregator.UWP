@@ -1,10 +1,13 @@
 ﻿using NewsAggregator.Data;
 using NewsAggregator.Models;
+using NewsAggregator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -13,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -24,36 +28,37 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class NwsViewer : Page
     {
-        public String uri;
+        ResultViewModel storyView { get; set; }
         public NwsViewer()
         {
             this.InitializeComponent();
+            backArrow.Source= new BitmapImage(new Uri(this.BaseUri, "/Assets/back_Arrow.png"));
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            var parameters = (Story)e.Parameter;
-            uri = parameters.Uri;
-            viewer.Navigate(new Uri(parameters.Uri));
-            
-            StoryService ss = new StoryService();
-            foreach(String s in parameters.Categories)
-            {
-                ss.addLike(s);
-            }
+            Story parameters = (Story)e.Parameter;
+            storyView = new ResultViewModel(parameters);
+            String uri = parameters.Uri;
+            viewer.Navigate(new Uri(uri));
         }
 
         private void viewer_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            if(args.Uri!=null&&args.Uri != new Uri(uri))
+            /*if(args.Uri!=null&&args.Uri != (storyView.uri))
             {
-                args.Cancel = true;
-            }
+                //args.Cancel = true;
+            }*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        { 
-            Frame.Navigate(typeof(Feed));
+        {
+            Frame.GoBack();
+        }
+
+        private void viewer_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            storyView.switchIsActive();
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Facebook;
+using Mntone.SvgForXaml;
 using NewsAggregator.Data;
+using NewsAggregator.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Security.Authentication.Web;
+using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -22,6 +25,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using winsdkfb;
 
@@ -34,10 +38,17 @@ namespace NewsAggregator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        LoginViewModel loginVM;
         public MainPage()
         {
             this.InitializeComponent();
+            //initialize view model
+            loginVM = new LoginViewModel();
+            //setting page image sources
+            imgTitle.Source = new BitmapImage(new Uri(this.BaseUri, "/Assets/The Daily Feed Logo.png"));
+            FBlogin.Source= new BitmapImage(new Uri(this.BaseUri, "/Assets/Facebook Icon.ico"));
         }
+        
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
@@ -45,85 +56,103 @@ namespace NewsAggregator
         }
         private async Task<String> AuthenticateFacebookAsync()
         {
-            //Facebook app id
-            var clientId = "935566066588259";
-            //Facebook permissions
-            var scope = "public_profile,email,user_likes";
+            //start progressRing
+            loginVM.switchIsActive();
+            //start facebook login process
+            FBSession session = FBSession.ActiveSession;
+            session.FBAppId = (935566066588259).ToString();
+            List<String> permissionList = new List<String>();//list of all the permissions needed from the user
+            permissionList.Add("public_profile");
+            permissionList.Add("email");
 
-            var redirectUri = WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString();
-            var fb = new FacebookClient();
-            Uri loginUrl = fb.GetLoginUrl(new
-            {
-                client_id = clientId,
-                redirect_uri = redirectUri,
-                response_type = "token",
-                scope = scope
-            });
+            FBPermissions permissions = new FBPermissions(permissionList);
+            //login
+            var result = await session.LoginAsync(permissions);
+            if (result.Succeeded)
+            { 
+                //user successfully logged into facebook
+                String email = session.User.Id+session.User.Name;
+                String pass = session.User.Id;
 
-            Uri startUri = loginUrl;
-            Uri endUri = new Uri(redirectUri, UriKind.Absolute);
-            WebAuthenticationResult result = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, startUri, endUri);
-
-            if(result.ResponseStatus == (WebAuthenticationStatus.Success)){
-                var pattern = string.Format("{0}#access_token={1}&expires_in={2}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri(), "(?<access_token>.+)", "(?<expires_in>.+)");
-                var match = Regex.Match(result.ResponseData, pattern);
-
-                var access_token = match.Groups["access_token"];
-                var expires_in = match.Groups["expires_in"];
-
-                var AccessToken = access_token.Value;
-                var TokenExpiry = DateTime.Now.AddSeconds(double.Parse(expires_in.Value));
-
-                FacebookClient client = new FacebookClient(AccessToken);
-                dynamic stuff = await client.GetTaskAsync("me");
-                //FBSession
-                var results = string.Format("https://graph.facebook.com/me/likes?&access_token=EAANS5HMQGmMBAGQ5lJSOhgjJk5CSCtPPfLOi37ZCv7Fj86KZC1ZCAZCYzOCMDrk9G4rIZCqzNfdwunuZC4nZCydZAYnOhuJjra0vsTCWeqzAMp6hkOx9xjxQZC9REbRRnGL9k1CFZBsNZAex8vEKBZB3xzeEfP1VB2jivUbHeW7ZAerP9Iwoc18uc8QoHhQkNigcxBWkZD");
-                //dynamic t = await client.GetTaskAsync("https://graph.facebook.com/v2.7/me/likes");
-                String str = stuff.id;
-                dynamic likes = await client.GetTaskAsync(results);
-                
+                //create profile for user
+                Profile p = new Profile(email, pass);
+                //check if user already has account
+                String loginStatus = await ProfileService.login(p);
+                if (loginStatus.Equals("false"))
+                {
+                    //account not created yet, register user
+                    loginStatus = await ProfileService.Write(p);
+                    if (!loginStatus.Equals("false"))
+                    {
+                        //new user account created
+                        //user logged in
+                        App.loginid = loginStatus;
+                        Frame.Navigate(typeof(Feed));
+                    }
+                }
+                else
+                {
+                    //user logged in
+                    App.loginid = loginStatus;
+                    Frame.Navigate(typeof(Feed));
+                }
             }
-            //await ParseAuthenticationResult(result);
-            return "";
+            loginVM.switchIsActive();
+            return "false";
         }
 
         private async void register_Click(object sender, RoutedEventArgs e)
         {
-            String usr = usrName.Text;
-            String pass = passwrd.Text;
+            loginVM.switchIsActive();
+            //use textboxes as fields for new account
+            String usr = txtUsrName.Text;
+            String pass = txtPasswrd.Password;
             Profile p = new Profile(usr, pass);
             try
             {
+                //try to register
                 String result = await ProfileService.Write(p);
-                String id = await ProfileService.ParseRegResponse(result, "Username Taken");
-                App.loginid = id;
-                Frame.Navigate(typeof(Feed));
+                if (!result.Equals("false"))
+                {
+                    //log into new account
+                    loginVM.switchIsActive();
+                    App.loginid = result;
+                    Frame.Navigate(typeof(Feed));
+                }
             }
             catch(AggregateException)
             {
+                //account already created
                 ProfileService.FailedRequest();
             }
-            
+            loginVM.switchIsActive();
         }
 
         private async void Mongologin_Click(object sender, RoutedEventArgs e)
         {
-            String usr = usrName.Text;
-            String pass = passwrd.Text;
+            loginVM.switchIsActive();
+            //login user 
+            String usr = txtUsrName.Text;
+            String pass = txtPasswrd.Password;
             Profile p = new Profile(usr, pass);
             try
             {
+                //attempt to login
                 String id = await ProfileService.ParseRegResponse(await ProfileService.login(p), "Invalid Login");
-                if(id!="false")
+                if(!id.Equals("false"))
                 {
+                    //user logged in successfully
+                    loginVM.switchIsActive();
                     App.loginid = id;
                     Frame.Navigate(typeof(Feed));
                 }
             }
             catch (AggregateException)
             {
+                //user failed to login
                 ProfileService.FailedRequest();
             }
+            loginVM.switchIsActive();
         }
     }
 }
